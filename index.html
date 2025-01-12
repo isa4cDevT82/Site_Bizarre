@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteDoBizarre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <!-- Banner no topo -->
+        <div class="banner">
+          
+        </div>
+
+        <h2>Envie sua Sugestão</h2>
+
+        <form action="https://formsubmit.co/davidbdreamshorts@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Nome" required />
+    <input type="email" name="email" placeholder="E-mail" required />
+    <textarea name="suggestion" placeholder="Sugestão" required></textarea>
+    <button onclick="abrirFormulario" type="submit">Enviar Sugestão</button>
+
+    <!-- Campos ocultos para configurar -->
+    <input type="hidden" name="_subject" value="Nova Sugestão!" />
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_template" value="table" />
+</form>
+
+        <!-- Redes sociais com links -->
+        <div class="social-links">
+            <a href="https://discord.gg/Jfu8a9ujza" target="_blank">
+                <img src="o.jpg" alt="Discord" class="social-logo">
+                <p>Discord<br>comunity</p>
+            </a>
+            <a href="https://m.youtube.com/@DavidBizarre/?sub_confirmation=1" target="_blank">
+                <img src="b.jpg" alt="YouTube" class="social-logo">
+                <p>You Tube</p>
+            </a>
+            <a href="https://www.tiktok.com/@davidbizarre?_t=ZM-8szrJvHriqs&_r=1" target="_blank">
+                <img src="a.jpg" alt="TikTok" class="social-logo">
+                <p>TikTok</p>
+            </a>
+        </div>
+
+        <!-- Seção para o PIX -->
+        <div class="pix-section">
+            <!-- Campo da chave PIX -->
+            <h3>Quer apoiar o canal? Mande pix para</h3>
+<input type="text" id="pixKey" value="10029325218" readonly />
+<button id="copyPix">Copiar Chave PIX</button>
+
+<script>
+    document.getElementById('copyPix').addEventListener('click', () => {
+        const pixKey = document.getElementById('pixKey');
+        
+        // Copiar para a área de transferência
+        navigator.clipboard.writeText(pixKey.value)
+            .then(() => {
+                alert('Chave PIX copiada!');
+            })
+            .catch(err => {
+                console.error('Erro ao copiar chave PIX:', err);
+            });
+    });
+    function abrirFormulario() {
+    // Substitua pelo link do seu Google Form
+    const linkFormulario = 'https://docs.google.com/forms/d/e/SEU_LINK_DO_FORMULARIO/viewform';
+    window.open(linkFormulario, '_blank');
+}
+</script>
+        </div>
+    </div>
+
+   
+</body>
+</html>
